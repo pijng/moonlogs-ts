@@ -1,4 +1,4 @@
-<!-- [![Generate and Publish Ruby Client](https://github.com/pijng/moonlogs-ruby/actions/workflows/release.yml/badge.svg)](https://github.com/pijng/moonlogs-ruby/actions/workflows/release.yml) -->
+[![Generate and Publish Typescript Client](https://github.com/pijng/moonlogs-ts/actions/workflows/release.yml/badge.svg)](https://github.com/pijng/moonlogs-ts/actions/workflows/release.yml)
 
 
 # moonlogs-ts client

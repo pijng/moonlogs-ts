@@ -31,8 +31,7 @@ jobs:
       - name: Generate Typescript Client
         run: |
           npm install @openapitools/openapi-generator-cli -g
-          openapi-generator-cli version-manager set 5.4.0
-          openapi-generator-cli generate -g typescript-node -i swagger.yaml -o moonlogs-ts --git-repo-id moonlogs-ts --git-user-id pijng --additional-properties=supportES6=true,npmName=moonlogs-ts,typescriptThreePlus=true --skip-validate-spec
+          openapi-generator-cli generate -g typescript -i swagger.yaml -o moonlogs-ts --git-repo-id moonlogs-ts --git-user-id pijng --additional-properties=supportES6=true,npmName=moonlogs-ts --skip-validate-spec
           rm swagger.yaml
 
       - name: Commit & Push changes

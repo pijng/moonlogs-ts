@@ -21,10 +21,6 @@ jobs:
         run: |
           curl -sSLo swagger.yaml https://raw.githubusercontent.com/pijng/moonlogs/master/internal/api/swagger.yaml
 
-      - name: Download Swagger Codegen
-        run: |
-         wget https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/3.0.52/swagger-codegen-cli-3.0.52.jar -O swagger-codegen-cli.jar
-
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
@@ -34,7 +30,7 @@ jobs:
       - name: Generate Typescript Client
         run: |
           npm install @openapitools/openapi-generator-cli -g
-          openapi-generator-cli generate -g typescript-node -i swagger.yaml -o moonlogs-ts --additional-properties=supportES6=true,npmName=moonlogs-ts,npmVersion==${{ github.event.client_payload.tag_version }} --skip-validate-spec
+          openapi-generator-cli generate -g typescript-node -i swagger.yaml -o moonlogs-ts --additional-properties=supportES6=true,npmName=moonlogs-ts --skip-validate-spec
           rm swagger.yaml
 
       - name: Commit & Push changes

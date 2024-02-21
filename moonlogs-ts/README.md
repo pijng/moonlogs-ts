@@ -1,4 +1,4 @@
-## moonlogs-ts@0.5.10
+## moonlogs-ts@0.5.11
 
 This generator creates TypeScript/JavaScript client that utilizes fetch-api.
 
@@ -21,7 +21,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install moonlogs-ts@0.5.10 --save
+npm install moonlogs-ts@0.5.11 --save
 ```
 
 _unPublished (not recommended):_

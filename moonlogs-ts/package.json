@@ -4,7 +4,7 @@
     "description": "NodeJS client for moonlogs-ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+        "url": "https://github.com/pijng/moonlogs-ts.git"
     },
     "main": "dist/api.js",
     "types": "dist/api.d.ts",

@@ -24,7 +24,6 @@ export * from './role';
 export * from './schema';
 export * from './schemaField';
 export * from './schemaKind';
-export * from './schemaSearch';
 export * from './session';
 export * from './tag';
 export * from './user';
@@ -67,7 +66,6 @@ import { Role } from './role';
 import { Schema } from './schema';
 import { SchemaField } from './schemaField';
 import { SchemaKind } from './schemaKind';
-import { SchemaSearch } from './schemaSearch';
 import { Session } from './session';
 import { Tag } from './tag';
 import { User } from './user';
@@ -113,7 +111,6 @@ let typeMap: {[index: string]: any} = {
     "Schema": Schema,
     "SchemaField": SchemaField,
     "SchemaKind": SchemaKind,
-    "SchemaSearch": SchemaSearch,
     "Session": Session,
     "Tag": Tag,
     "User": User,

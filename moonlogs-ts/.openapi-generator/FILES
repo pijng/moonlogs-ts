@@ -28,7 +28,6 @@ model/role.ts
 model/schema.ts
 model/schemaField.ts
 model/schemaKind.ts
-model/schemaSearch.ts
 model/session.ts
 model/tag.ts
 model/user.ts

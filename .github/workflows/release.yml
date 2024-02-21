@@ -33,8 +33,8 @@ jobs:
 
       - name: Generate Typescript Client
         run: |
-          java -jar swagger-codegen-cli.jar generate -i swagger.yaml --l typescript-fetch -o moonlogs-ts --additional-properties npmName=moonlogs-ts npmVersion==${{ github.event.client_payload.tag_version }}
-          rm swagger-codegen-cli.jar
+          npm install @openapitools/openapi-generator-cli -g
+          openapi-generator-cli generate -g typescript-node -i swagger.yaml -o moonlogs-ts --additional-properties=supportES6=true,npmName=moonlogs-ts,npmVersion==${{ github.event.client_payload.tag_version }} --skip-validate-spec
           rm swagger.yaml
 
       - name: Commit & Push changes

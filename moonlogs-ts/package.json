@@ -1,6 +1,6 @@
 {
     "name": "moonlogs-ts",
-    "version": "&#x3D;0.5.8",
+    "version": "0.5.8",
     "description": "NodeJS client for moonlogs-ts",
     "repository": {
         "type": "git",

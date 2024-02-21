@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -43,6 +44,7 @@ jobs:
       - name: Build and publish package
         run: |
           cd moonlogs-ts
+          echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > .npmrc
           npm install
           npm run build
           npm ci

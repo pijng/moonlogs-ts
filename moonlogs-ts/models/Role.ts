@@ -12,7 +12,4 @@
 
 import { HttpFile } from '../http/http';
 
-export enum Role {
-    Member = 'Member',
-    Admin = 'Admin'
-}
+export type Role = "Member" | "Admin" ;

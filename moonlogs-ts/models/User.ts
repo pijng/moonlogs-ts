@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { UserRole } from '../models/UserRole';
+import { Role } from './Role';
 import { HttpFile } from '../http/http';
 
 export class User {
@@ -19,7 +19,7 @@ export class User {
     'email': string;
     'password': string;
     'passwordDigest'?: string;
-    'role': UserRole;
+    'role': Role;
     'tags': Array<number>;
     'token'?: string;
     'isRevoked': boolean;
@@ -60,7 +60,7 @@ export class User {
         {
             "name": "role",
             "baseName": "role",
-            "type": "UserRole",
+            "type": "Role",
             "format": ""
         },
         {

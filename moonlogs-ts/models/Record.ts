@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-import { RecordLevel } from '../models/RecordLevel';
+import { Level } from './Level';
 import { HttpFile } from '../http/http';
 
 export class Record {
@@ -22,7 +22,7 @@ export class Record {
     'kind': string;
     'createdAt'?: string;
     'groupHash'?: string;
-    'level'?: RecordLevel;
+    'level'?: Level;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -78,7 +78,7 @@ export class Record {
         {
             "name": "level",
             "baseName": "level",
-            "type": "RecordLevel",
+            "type": "Level",
             "format": ""
         }    ];
 

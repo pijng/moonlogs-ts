@@ -35,8 +35,7 @@ Method | HTTP request | Description
 
 
 # **apiApiTokensGet**
-> Model200Response9 apiApiTokensGet()
-
+> InlineResponse2009 apiApiTokensGet()
 
 
 ### Example
@@ -63,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Model200Response9**
+**InlineResponse2009**
 
 ### Authorization
 
@@ -83,8 +82,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiApiTokensIdDelete**
-> Model200Response11 apiApiTokensIdDelete()
-
+> InlineResponse20011 apiApiTokensIdDelete()
 
 
 ### Example
@@ -98,7 +96,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiApiTokensIdDeleteRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -117,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response11**
+**InlineResponse20011**
 
 ### Authorization
 
@@ -137,8 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiApiTokensIdGet**
-> Model200Response10 apiApiTokensIdGet()
-
+> InlineResponse20010 apiApiTokensIdGet()
 
 
 ### Example
@@ -152,7 +149,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiApiTokensIdGetRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -171,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response10**
+**InlineResponse20010**
 
 ### Authorization
 
@@ -191,8 +188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiApiTokensIdPut**
-> Model200Response10 apiApiTokensIdPut()
-
+> InlineResponse20010 apiApiTokensIdPut()
 
 
 ### Example
@@ -206,7 +202,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiApiTokensIdPutRequest = {
-  // number | 
+  // number
   id: 1,
   // ApiToken (optional)
   apiToken: {
@@ -233,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response10**
+**InlineResponse20010**
 
 ### Authorization
 
@@ -253,8 +249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiApiTokensPost**
-> Model200Response10 apiApiTokensPost()
-
+> InlineResponse20010 apiApiTokensPost()
 
 
 ### Example
@@ -292,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response10**
+**InlineResponse20010**
 
 ### Authorization
 
@@ -312,8 +307,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiLogsGet**
-> Model200Response3 apiLogsGet()
-
+> InlineResponse2003 apiLogsGet()
 
 
 ### Example
@@ -327,9 +321,9 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiLogsGetRequest = {
-  // number |  (optional)
+  // number (optional)
   page: 1,
-  // number |  (optional)
+  // number (optional)
   limit: 1,
 };
 
@@ -349,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response3**
+**InlineResponse2003**
 
 ### Authorization
 
@@ -369,8 +363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiLogsGroupSchemaNameHashGet**
-> Model200Response3 apiLogsGroupSchemaNameHashGet()
-
+> InlineResponse2003 apiLogsGroupSchemaNameHashGet()
 
 
 ### Example
@@ -384,9 +377,9 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiLogsGroupSchemaNameHashGetRequest = {
-  // string | 
+  // string
   schemaName: "schema_name_example",
-  // string | 
+  // string
   hash: "hash_example",
 };
 
@@ -406,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response3**
+**InlineResponse2003**
 
 ### Authorization
 
@@ -426,8 +419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiLogsIdGet**
-> Model200Response4 apiLogsIdGet()
-
+> InlineResponse2004 apiLogsIdGet()
 
 
 ### Example
@@ -441,7 +433,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiLogsIdGetRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -460,7 +452,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response4**
+**InlineResponse2004**
 
 ### Authorization
 
@@ -480,8 +472,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiLogsPost**
-> Model200Response4 apiLogsPost()
-
+> InlineResponse2004 apiLogsPost()
 
 
 ### Example
@@ -524,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response4**
+**InlineResponse2004**
 
 ### Authorization
 
@@ -544,8 +535,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiLogsSearchPost**
-> Model200Response3 apiLogsSearchPost()
-
+> InlineResponse2003 apiLogsSearchPost()
 
 
 ### Example
@@ -559,9 +549,9 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiLogsSearchPostRequest = {
-  // number |  (optional)
+  // number (optional)
   page: 1,
-  // number |  (optional)
+  // number (optional)
   limit: 1,
   // string | Time in format \"YYYY-DD-MMTHH:SS\" (optional)
   _from: "from_example",
@@ -600,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response3**
+**InlineResponse2003**
 
 ### Authorization
 
@@ -620,8 +610,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiSchemasGet**
-> Model200Response apiSchemasGet()
-
+> InlineResponse200 apiSchemasGet()
 
 
 ### Example
@@ -648,7 +637,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Model200Response**
+**InlineResponse200**
 
 ### Authorization
 
@@ -668,8 +657,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiSchemasIdDelete**
-> Model200Response2 apiSchemasIdDelete()
-
+> InlineResponse2002 apiSchemasIdDelete()
 
 
 ### Example
@@ -683,7 +671,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiSchemasIdDeleteRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -702,7 +690,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response2**
+**InlineResponse2002**
 
 ### Authorization
 
@@ -722,8 +710,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiSchemasIdGet**
-> Model200Response1 apiSchemasIdGet()
-
+> InlineResponse2001 apiSchemasIdGet()
 
 
 ### Example
@@ -737,7 +724,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiSchemasIdGetRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -756,7 +743,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response1**
+**InlineResponse2001**
 
 ### Authorization
 
@@ -776,8 +763,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiSchemasIdPut**
-> Model200Response1 apiSchemasIdPut()
-
+> InlineResponse2001 apiSchemasIdPut()
 
 
 ### Example
@@ -791,7 +777,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiSchemasIdPutRequest = {
-  // number | 
+  // number
   id: 1,
   // Schema (optional)
   schema: {
@@ -832,7 +818,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response1**
+**InlineResponse2001**
 
 ### Authorization
 
@@ -852,8 +838,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiSchemasPost**
-> Model200Response1 apiSchemasPost()
-
+> InlineResponse2001 apiSchemasPost()
 
 
 ### Example
@@ -905,7 +890,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response1**
+**InlineResponse2001**
 
 ### Authorization
 
@@ -925,8 +910,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiSessionGet**
-> Model200Response8 apiSessionGet()
-
+> InlineResponse2008 apiSessionGet()
 
 
 ### Example
@@ -953,7 +937,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Model200Response8**
+**InlineResponse2008**
 
 ### Authorization
 
@@ -973,8 +957,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiSessionPost**
-> Model200Response8 apiSessionPost()
-
+> InlineResponse2008 apiSessionPost()
 
 
 ### Example
@@ -1010,7 +993,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response8**
+**InlineResponse2008**
 
 ### Authorization
 
@@ -1031,7 +1014,6 @@ No authorization required
 
 # **apiSetupRegisterAdminPost**
 > User apiSetupRegisterAdminPost()
-
 
 
 ### Example
@@ -1096,8 +1078,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiTagsGet**
-> Model200Response12 apiTagsGet()
-
+> InlineResponse20012 apiTagsGet()
 
 
 ### Example
@@ -1124,7 +1105,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Model200Response12**
+**InlineResponse20012**
 
 ### Authorization
 
@@ -1144,8 +1125,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiTagsIdDelete**
-> Model200Response11 apiTagsIdDelete()
-
+> InlineResponse20011 apiTagsIdDelete()
 
 
 ### Example
@@ -1159,7 +1139,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiTagsIdDeleteRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -1178,7 +1158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response11**
+**InlineResponse20011**
 
 ### Authorization
 
@@ -1198,8 +1178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiTagsIdGet**
-> Model200Response13 apiTagsIdGet()
-
+> InlineResponse20013 apiTagsIdGet()
 
 
 ### Example
@@ -1213,7 +1192,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiTagsIdGetRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -1232,7 +1211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response13**
+**InlineResponse20013**
 
 ### Authorization
 
@@ -1252,8 +1231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiTagsIdPut**
-> Model200Response13 apiTagsIdPut()
-
+> InlineResponse20013 apiTagsIdPut()
 
 
 ### Example
@@ -1267,7 +1245,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiTagsIdPutRequest = {
-  // number | 
+  // number
   id: 1,
   // Tag (optional)
   tag: {
@@ -1292,7 +1270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response13**
+**InlineResponse20013**
 
 ### Authorization
 
@@ -1312,8 +1290,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiTagsPost**
-> Model200Response13 apiTagsPost()
-
+> InlineResponse20013 apiTagsPost()
 
 
 ### Example
@@ -1349,7 +1326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response13**
+**InlineResponse20013**
 
 ### Authorization
 
@@ -1369,8 +1346,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiUsersGet**
-> Model200Response5 apiUsersGet()
-
+> InlineResponse2005 apiUsersGet()
 
 
 ### Example
@@ -1397,7 +1373,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Model200Response5**
+**InlineResponse2005**
 
 ### Authorization
 
@@ -1417,8 +1393,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiUsersIdDelete**
-> Model200Response7 apiUsersIdDelete()
-
+> InlineResponse2007 apiUsersIdDelete()
 
 
 ### Example
@@ -1432,7 +1407,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiUsersIdDeleteRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -1451,7 +1426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response7**
+**InlineResponse2007**
 
 ### Authorization
 
@@ -1471,8 +1446,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiUsersIdGet**
-> Model200Response6 apiUsersIdGet()
-
+> InlineResponse2006 apiUsersIdGet()
 
 
 ### Example
@@ -1486,7 +1460,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiUsersIdGetRequest = {
-  // number | 
+  // number
   id: 1,
 };
 
@@ -1505,7 +1479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response6**
+**InlineResponse2006**
 
 ### Authorization
 
@@ -1525,8 +1499,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiUsersIdPut**
-> Model200Response6 apiUsersIdPut()
-
+> InlineResponse2006 apiUsersIdPut()
 
 
 ### Example
@@ -1540,7 +1513,7 @@ const configuration = .createConfiguration();
 const apiInstance = new .DefaultApi(configuration);
 
 let body:.DefaultApiApiUsersIdPutRequest = {
-  // number | 
+  // number
   id: 1,
   // User (optional)
   user: {
@@ -1574,7 +1547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response6**
+**InlineResponse2006**
 
 ### Authorization
 
@@ -1594,8 +1567,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **apiUsersPost**
-> Model200Response6 apiUsersPost()
-
+> InlineResponse2006 apiUsersPost()
 
 
 ### Example
@@ -1640,7 +1612,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Model200Response6**
+**InlineResponse2006**
 
 ### Authorization
 

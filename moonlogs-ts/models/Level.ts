@@ -12,11 +12,4 @@
 
 import { HttpFile } from '../http/http';
 
-export enum Level {
-    Trace = 'Trace',
-    Debug = 'Debug',
-    Info = 'Info',
-    Warn = 'Warn',
-    Error = 'Error',
-    Fatal = 'Fatal'
-}
+export type Level = "Trace" | "Debug" | "Info" | "Warn" | "Error" | "Fatal" ;

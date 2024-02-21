@@ -1,60 +1,56 @@
-export * from '../models/ApiToken';
-export * from '../models/Credentials';
-export * from '../models/Level';
-export * from '../models/Meta';
-export * from '../models/Model200Response';
-export * from '../models/Model200Response1';
-export * from '../models/Model200Response10';
-export * from '../models/Model200Response11';
-export * from '../models/Model200Response12';
-export * from '../models/Model200Response13';
-export * from '../models/Model200Response2';
-export * from '../models/Model200Response3';
-export * from '../models/Model200Response4';
-export * from '../models/Model200Response5';
-export * from '../models/Model200Response6';
-export * from '../models/Model200Response7';
-export * from '../models/Model200Response8';
-export * from '../models/Model200Response9';
-export * from '../models/Record';
-export * from '../models/RecordLevel';
-export * from '../models/Role';
-export * from '../models/Schema';
-export * from '../models/SchemaField';
-export * from '../models/SchemaKind';
-export * from '../models/Session';
-export * from '../models/Tag';
-export * from '../models/User';
-export * from '../models/UserRole';
+export * from './ApiToken';
+export * from './Credentials';
+export * from './InlineResponse200';
+export * from './InlineResponse2001';
+export * from './InlineResponse20010';
+export * from './InlineResponse20011';
+export * from './InlineResponse20012';
+export * from './InlineResponse20013';
+export * from './InlineResponse2002';
+export * from './InlineResponse2003';
+export * from './InlineResponse2004';
+export * from './InlineResponse2005';
+export * from './InlineResponse2006';
+export * from './InlineResponse2007';
+export * from './InlineResponse2008';
+export * from './InlineResponse2009';
+export * from './Level';
+export * from './Meta';
+export * from './Record';
+export * from './Role';
+export * from './Schema';
+export * from './SchemaField';
+export * from './SchemaKind';
+export * from './Session';
+export * from './Tag';
+export * from './User';
 
-import { ApiToken } from '../models/ApiToken';
-import { Credentials } from '../models/Credentials';
-import { Level } from '../models/Level';
-import { Meta } from '../models/Meta';
-import { Model200Response } from '../models/Model200Response';
-import { Model200Response1 } from '../models/Model200Response1';
-import { Model200Response10 } from '../models/Model200Response10';
-import { Model200Response11 } from '../models/Model200Response11';
-import { Model200Response12 } from '../models/Model200Response12';
-import { Model200Response13 } from '../models/Model200Response13';
-import { Model200Response2 } from '../models/Model200Response2';
-import { Model200Response3 } from '../models/Model200Response3';
-import { Model200Response4 } from '../models/Model200Response4';
-import { Model200Response5 } from '../models/Model200Response5';
-import { Model200Response6 } from '../models/Model200Response6';
-import { Model200Response7 } from '../models/Model200Response7';
-import { Model200Response8 } from '../models/Model200Response8';
-import { Model200Response9 } from '../models/Model200Response9';
-import { Record } from '../models/Record';
-import { RecordLevel } from '../models/RecordLevel';
-import { Role } from '../models/Role';
-import { Schema } from '../models/Schema';
-import { SchemaField } from '../models/SchemaField';
-import { SchemaKind } from '../models/SchemaKind';
-import { Session } from '../models/Session';
-import { Tag } from '../models/Tag';
-import { User } from '../models/User';
-import { UserRole } from '../models/UserRole';
+import { ApiToken } from './ApiToken';
+import { Credentials } from './Credentials';
+import { InlineResponse200 } from './InlineResponse200';
+import { InlineResponse2001 } from './InlineResponse2001';
+import { InlineResponse20010 } from './InlineResponse20010';
+import { InlineResponse20011 } from './InlineResponse20011';
+import { InlineResponse20012 } from './InlineResponse20012';
+import { InlineResponse20013 } from './InlineResponse20013';
+import { InlineResponse2002 } from './InlineResponse2002';
+import { InlineResponse2003 } from './InlineResponse2003';
+import { InlineResponse2004 } from './InlineResponse2004';
+import { InlineResponse2005 } from './InlineResponse2005';
+import { InlineResponse2006 } from './InlineResponse2006';
+import { InlineResponse2007 } from './InlineResponse2007';
+import { InlineResponse2008 } from './InlineResponse2008';
+import { InlineResponse2009 } from './InlineResponse2009';
+import { Level } from './Level';
+import { Meta } from './Meta';
+import { Record } from './Record';
+import { Role } from './Role';
+import { Schema } from './Schema';
+import { SchemaField } from './SchemaField';
+import { SchemaKind } from './SchemaKind';
+import { Session } from './Session';
+import { Tag } from './Tag';
+import { User } from './User';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -68,6 +64,13 @@ let primitives = [
                     "any"
                  ];
 
+const supportedMediaTypes: { [mediaType: string]: number } = {
+  "application/json": Infinity,
+  "application/octet-stream": 0,
+  "application/x-www-form-urlencoded": 0
+}
+
+
 let enumsMap: Set<string> = new Set<string>([
     "Level",
     "Role",
@@ -76,83 +79,29 @@ let enumsMap: Set<string> = new Set<string>([
 let typeMap: {[index: string]: any} = {
     "ApiToken": ApiToken,
     "Credentials": Credentials,
+    "InlineResponse200": InlineResponse200,
+    "InlineResponse2001": InlineResponse2001,
+    "InlineResponse20010": InlineResponse20010,
+    "InlineResponse20011": InlineResponse20011,
+    "InlineResponse20012": InlineResponse20012,
+    "InlineResponse20013": InlineResponse20013,
+    "InlineResponse2002": InlineResponse2002,
+    "InlineResponse2003": InlineResponse2003,
+    "InlineResponse2004": InlineResponse2004,
+    "InlineResponse2005": InlineResponse2005,
+    "InlineResponse2006": InlineResponse2006,
+    "InlineResponse2007": InlineResponse2007,
+    "InlineResponse2008": InlineResponse2008,
+    "InlineResponse2009": InlineResponse2009,
     "Meta": Meta,
-    "Model200Response": Model200Response,
-    "Model200Response1": Model200Response1,
-    "Model200Response10": Model200Response10,
-    "Model200Response11": Model200Response11,
-    "Model200Response12": Model200Response12,
-    "Model200Response13": Model200Response13,
-    "Model200Response2": Model200Response2,
-    "Model200Response3": Model200Response3,
-    "Model200Response4": Model200Response4,
-    "Model200Response5": Model200Response5,
-    "Model200Response6": Model200Response6,
-    "Model200Response7": Model200Response7,
-    "Model200Response8": Model200Response8,
-    "Model200Response9": Model200Response9,
     "Record": Record,
-    "RecordLevel": RecordLevel,
     "Schema": Schema,
     "SchemaField": SchemaField,
     "SchemaKind": SchemaKind,
     "Session": Session,
     "Tag": Tag,
     "User": User,
-    "UserRole": UserRole,
 }
-
-type MimeTypeDescriptor = {
-    type: string;
-    subtype: string;
-    subtypeTokens: string[];
-};
-
-/**
- * Every mime-type consists of a type, subtype, and optional parameters.
- * The subtype can be composite, including information about the content format.
- * For example: `application/json-patch+json`, `application/merge-patch+json`.
- *
- * This helper transforms a string mime-type into an internal representation.
- * This simplifies the implementation of predicates that in turn define common rules for parsing or stringifying
- * the payload.
- */
-const parseMimeType = (mimeType: string): MimeTypeDescriptor => {
-    const [type, subtype] = mimeType.split('/');
-    return {
-        type,
-        subtype,
-        subtypeTokens: subtype.split('+'),
-    };
-};
-
-type MimeTypePredicate = (mimeType: string) => boolean;
-
-// This factory creates a predicate function that checks a string mime-type against defined rules.
-const mimeTypePredicateFactory = (predicate: (descriptor: MimeTypeDescriptor) => boolean): MimeTypePredicate => (mimeType) => predicate(parseMimeType(mimeType));
-
-// Use this factory when you need to define a simple predicate based only on type and, if applicable, subtype.
-const mimeTypeSimplePredicateFactory = (type: string, subtype?: string): MimeTypePredicate => mimeTypePredicateFactory((descriptor) => {
-    if (descriptor.type !== type) return false;
-    if (subtype != null && descriptor.subtype !== subtype) return false;
-    return true;
-});
-
-// Creating a set of named predicates that will help us determine how to handle different mime-types
-const isTextLikeMimeType = mimeTypeSimplePredicateFactory('text');
-const isJsonMimeType = mimeTypeSimplePredicateFactory('application', 'json');
-const isJsonLikeMimeType = mimeTypePredicateFactory((descriptor) => descriptor.type === 'application' && descriptor.subtypeTokens.some((item) => item === 'json'));
-const isOctetStreamMimeType = mimeTypeSimplePredicateFactory('application', 'octet-stream');
-const isFormUrlencodedMimeType = mimeTypeSimplePredicateFactory('application', 'x-www-form-urlencoded');
-
-// Defining a list of mime-types in the order of prioritization for handling.
-const supportedMimeTypePredicatesWithPriority: MimeTypePredicate[] = [
-    isJsonMimeType,
-    isJsonLikeMimeType,
-    isTextLikeMimeType,
-    isOctetStreamMimeType,
-    isFormUrlencodedMimeType,
-];
 
 export class ObjectSerializer {
     public static findCorrectType(data: any, expectedType: string) {
@@ -199,7 +148,8 @@ export class ObjectSerializer {
             let subType: string = type.replace("Array<", ""); // Array<Type> => Type>
             subType = subType.substring(0, subType.length - 1); // Type> => Type
             let transformedData: any[] = [];
-            for (let date of data) {
+            for (let index in data) {
+                let date = data[index];
                 transformedData.push(ObjectSerializer.serialize(date, subType, format));
             }
             return transformedData;
@@ -228,7 +178,8 @@ export class ObjectSerializer {
             // get the map for the correct type.
             let attributeTypes = typeMap[type].getAttributeTypeMap();
             let instance: {[index: string]: any} = {};
-            for (let attributeType of attributeTypes) {
+            for (let index in attributeTypes) {
+                let attributeType = attributeTypes[index];
                 instance[attributeType.baseName] = ObjectSerializer.serialize(data[attributeType.name], attributeType.type, attributeType.format);
             }
             return instance;
@@ -246,7 +197,8 @@ export class ObjectSerializer {
             let subType: string = type.replace("Array<", ""); // Array<Type> => Type>
             subType = subType.substring(0, subType.length - 1); // Type> => Type
             let transformedData: any[] = [];
-            for (let date of data) {
+            for (let index in data) {
+                let date = data[index];
                 transformedData.push(ObjectSerializer.deserialize(date, subType, format));
             }
             return transformedData;
@@ -262,11 +214,9 @@ export class ObjectSerializer {
             }
             let instance = new typeMap[type]();
             let attributeTypes = typeMap[type].getAttributeTypeMap();
-            for (let attributeType of attributeTypes) {
-                let value = ObjectSerializer.deserialize(data[attributeType.baseName], attributeType.type, attributeType.format);
-                if (value !== undefined) {
-                    instance[attributeType.name] = value;
-                }
+            for (let index in attributeTypes) {
+                let attributeType = attributeTypes[index];
+                instance[attributeType.name] = ObjectSerializer.deserialize(data[attributeType.baseName], attributeType.type, attributeType.format);
             }
             return instance;
         }
@@ -294,32 +244,32 @@ export class ObjectSerializer {
      */
     public static getPreferredMediaType(mediaTypes: Array<string>): string {
         /** According to OAS 3 we should default to json */
-        if (mediaTypes.length === 0) {
+        if (!mediaTypes) {
             return "application/json";
         }
 
         const normalMediaTypes = mediaTypes.map(this.normalizeMediaType);
-
-        for (const predicate of supportedMimeTypePredicatesWithPriority) {
-            for (const mediaType of normalMediaTypes) {
-                if (mediaType != null && predicate(mediaType)) {
-                    return mediaType;
-                }
+        let selectedMediaType: string | undefined = undefined;
+        let selectedRank: number = -Infinity;
+        for (const mediaType of normalMediaTypes) {
+            if (supportedMediaTypes[mediaType!] > selectedRank) {
+                selectedMediaType = mediaType;
+                selectedRank = supportedMediaTypes[mediaType!];
             }
         }
 
-        throw new Error("None of the given media types are supported: " + mediaTypes.join(", "));
+        if (selectedMediaType === undefined) {
+            throw new Error("None of the given media types are supported: " + mediaTypes.join(", "));
+        }
+
+        return selectedMediaType!;
     }
 
     /**
      * Convert data to a string according the given media type
      */
     public static stringify(data: any, mediaType: string): string {
-        if (isTextLikeMimeType(mediaType)) {
-            return String(data);
-        }
-
-        if (isJsonLikeMimeType(mediaType)) {
+        if (mediaType === "application/json") {
             return JSON.stringify(data);
         }
 
@@ -334,11 +284,7 @@ export class ObjectSerializer {
             throw new Error("Cannot parse content. No Content-Type defined.");
         }
 
-        if (isTextLikeMimeType(mediaType)) {
-            return rawData;
-        }
-
-        if (isJsonLikeMimeType(mediaType)) {
+        if (mediaType === "application/json") {
             return JSON.parse(rawData);
         }
 

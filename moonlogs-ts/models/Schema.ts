@@ -10,8 +10,8 @@
  * Do not edit the class manually.
  */
 
-import { SchemaField } from '../models/SchemaField';
-import { SchemaKind } from '../models/SchemaKind';
+import { SchemaField } from './SchemaField';
+import { SchemaKind } from './SchemaKind';
 import { HttpFile } from '../http/http';
 
 export class Schema {

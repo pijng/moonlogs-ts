@@ -2,26 +2,20 @@
   "name": "moonlogs-ts",
   "version": "0.5.11",
   "description": "OpenAPI client for moonlogs-ts",
-  "author": "OpenAPI-Generator Contributors",
+  "author": "Mark Cholak <shalpack@gmail.com>",
   "keywords": [
     "fetch",
     "typescript",
-    "openapi-client",
-    "openapi-generator"
+    "openapi-typescript-codegen"
   ],
-  "license": "Unlicense",
+  "license": "Apache-2.0",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "dependencies": {
-    "whatwg-fetch": "^3.0.0",
-    "es6-promise": "^4.2.4",
-    "url-parse": "^1.4.3"
-  },
   "devDependencies": {
-    "typescript": "^3.9.3"
+    "typescript": "^5.3.3"
   }
 }

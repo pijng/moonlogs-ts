@@ -3,15 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { Level } from './Level';
-export type Record = {
-    id: number;
+export type RecordRequest = {
     text: string;
     schema_name: string;
     schema_id?: number;
     query: any;
-    kind: string;
-    created_at?: string;
-    group_hash?: string;
+    kind?: string;
     level?: Level;
 };
 

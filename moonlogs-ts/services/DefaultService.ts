@@ -5,7 +5,8 @@
 import type { ApiToken } from '../models/ApiToken';
 import type { Credentials } from '../models/Credentials';
 import type { Meta } from '../models/Meta';
-import type { Record } from '../models/Record';
+import type { RecordRequest } from '../models/RecordRequest';
+import type { RecordResponse } from '../models/RecordResponse';
 import type { Schema } from '../models/Schema';
 import type { Session } from '../models/Session';
 import type { Tag } from '../models/Tag';
@@ -132,12 +133,12 @@ export class DefaultService {
     public postApiLogs({
         requestBody,
     }: {
-        requestBody?: Record,
+        requestBody?: RecordRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Record;
+        data: RecordResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -161,7 +162,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: Array<Record>;
+        data: Array<RecordResponse>;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -185,7 +186,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: Record;
+        data: RecordResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -210,7 +211,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: Array<Record>;
+        data: Array<RecordResponse>;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -243,12 +244,12 @@ export class DefaultService {
          * Time in format "YYYY-DD-MMTHH:SS"
          */
         to?: string,
-        requestBody?: Record,
+        requestBody?: RecordRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Array<Record>;
+        data: Array<RecordResponse>;
         meta: Meta;
     }> {
         return this.httpRequest.request({

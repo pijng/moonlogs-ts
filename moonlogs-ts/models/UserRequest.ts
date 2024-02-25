@@ -3,15 +3,14 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { Role } from './Role';
-export type User = {
-    id: number;
+export type UserRequest = {
     name: string;
     email: string;
     password: string;
     password_digest?: string;
     role: Role;
-    tags: Array<number>;
+    tags?: Array<number>;
     token?: string;
-    is_revoked: boolean;
+    is_revoked?: boolean;
 };
 

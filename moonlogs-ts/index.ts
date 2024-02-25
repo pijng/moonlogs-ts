@@ -17,11 +17,13 @@ export type { Meta } from './models/Meta';
 export type { RecordRequest } from './models/RecordRequest';
 export type { RecordResponse } from './models/RecordResponse';
 export { Role } from './models/Role';
-export type { Schema } from './models/Schema';
 export type { SchemaField } from './models/SchemaField';
 export type { SchemaKind } from './models/SchemaKind';
+export type { SchemaRequest } from './models/SchemaRequest';
+export type { SchemaResponse } from './models/SchemaResponse';
 export type { Session } from './models/Session';
 export type { Tag } from './models/Tag';
-export type { User } from './models/User';
+export type { UserRequest } from './models/UserRequest';
+export type { UserResponse } from './models/UserResponse';
 
 export { DefaultService } from './services/DefaultService';

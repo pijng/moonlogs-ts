@@ -4,13 +4,12 @@
 /* eslint-disable */
 import type { SchemaField } from './SchemaField';
 import type { SchemaKind } from './SchemaKind';
-export type Schema = {
-    id: number;
+export type SchemaRequest = {
     title: string;
-    description?: string;
+    description: string;
     name: string;
     fields: Array<SchemaField>;
-    kinds: Array<SchemaKind>;
+    kinds?: Array<SchemaKind>;
     tag_id?: number;
     retention_days?: number;
 };

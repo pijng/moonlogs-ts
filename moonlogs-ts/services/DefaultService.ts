@@ -7,10 +7,12 @@ import type { Credentials } from '../models/Credentials';
 import type { Meta } from '../models/Meta';
 import type { RecordRequest } from '../models/RecordRequest';
 import type { RecordResponse } from '../models/RecordResponse';
-import type { Schema } from '../models/Schema';
+import type { SchemaRequest } from '../models/SchemaRequest';
+import type { SchemaResponse } from '../models/SchemaResponse';
 import type { Session } from '../models/Session';
 import type { Tag } from '../models/Tag';
-import type { User } from '../models/User';
+import type { UserRequest } from '../models/UserRequest';
+import type { UserResponse } from '../models/UserResponse';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
 export class DefaultService {
@@ -23,7 +25,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: Array<Schema>;
+        data: Array<SchemaResponse>;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -38,12 +40,12 @@ export class DefaultService {
     public postApiSchemas({
         requestBody,
     }: {
-        requestBody?: Schema,
+        requestBody?: SchemaRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Schema;
+        data: SchemaResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -65,7 +67,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: Schema;
+        data: SchemaResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -85,12 +87,12 @@ export class DefaultService {
         requestBody,
     }: {
         id: number,
-        requestBody?: Schema,
+        requestBody?: SchemaRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Schema;
+        data: SchemaResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -273,7 +275,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: Array<User>;
+        data: Array<UserResponse>;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -288,12 +290,12 @@ export class DefaultService {
     public postApiUsers({
         requestBody,
     }: {
-        requestBody?: User,
+        requestBody?: UserRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: User;
+        data: UserResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -315,7 +317,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: User;
+        data: UserResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -361,12 +363,12 @@ export class DefaultService {
         requestBody,
     }: {
         id: number,
-        requestBody?: User,
+        requestBody?: UserRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: User;
+        data: UserResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -418,14 +420,14 @@ export class DefaultService {
         });
     }
     /**
-     * @returns User
+     * @returns UserResponse
      * @throws ApiError
      */
     public postApiSetupRegisterAdmin({
         requestBody,
     }: {
-        requestBody?: User,
-    }): CancelablePromise<User> {
+        requestBody?: UserResponse,
+    }): CancelablePromise<UserResponse> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/api/setup/register_admin',

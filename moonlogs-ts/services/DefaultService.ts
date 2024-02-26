@@ -659,4 +659,26 @@ export class DefaultService {
             },
         });
     }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public createLogAsync({
+        requestBody,
+    }: {
+        requestBody?: RecordRequest,
+    }): CancelablePromise<{
+        success: boolean;
+        code: number;
+        error: string;
+        data: string;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/api/logs/async',
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
 }

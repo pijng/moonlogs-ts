@@ -11,6 +11,7 @@ export type SchemaRequest = {
     fields: Array<SchemaField>;
     kinds?: Array<SchemaKind>;
     tag_id?: number;
+    tag_name?: string;
     retention_days?: number;
 };
 

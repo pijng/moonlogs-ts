@@ -2,7 +2,7 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type ApiToken = {
+export type ApiTokenResponse = {
     id: number;
     token: string;
     name: string;

@@ -2,7 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { ApiToken } from '../models/ApiToken';
+import type { ApiTokenRequest } from '../models/ApiTokenRequest';
+import type { ApiTokenResponse } from '../models/ApiTokenResponse';
 import type { Credentials } from '../models/Credentials';
 import type { Meta } from '../models/Meta';
 import type { RecordRequest } from '../models/RecordRequest';
@@ -10,7 +11,8 @@ import type { RecordResponse } from '../models/RecordResponse';
 import type { SchemaRequest } from '../models/SchemaRequest';
 import type { SchemaResponse } from '../models/SchemaResponse';
 import type { Session } from '../models/Session';
-import type { Tag } from '../models/Tag';
+import type { TagRequest } from '../models/TagRequest';
+import type { TagResponse } from '../models/TagResponse';
 import type { UserRequest } from '../models/UserRequest';
 import type { UserResponse } from '../models/UserResponse';
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -21,7 +23,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiSchemas(): CancelablePromise<{
+    public getSchemas(): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
@@ -37,7 +39,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public postApiSchemas({
+    public createSchema({
         requestBody,
     }: {
         requestBody?: SchemaRequest,
@@ -59,7 +61,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiSchemas1({
+    public getSchemaById({
         id,
     }: {
         id: number,
@@ -82,7 +84,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public putApiSchemas({
+    public updateSchemaById({
         id,
         requestBody,
     }: {
@@ -109,7 +111,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public deleteApiSchemas({
+    public deleteSchemaById({
         id,
     }: {
         id: number,
@@ -132,7 +134,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public postApiLogs({
+    public createLog({
         requestBody,
     }: {
         requestBody?: RecordRequest,
@@ -154,7 +156,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiLogs({
+    public getLog({
         page,
         limit,
     }: {
@@ -180,7 +182,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiLogs1({
+    public getLogById({
         id,
     }: {
         id: number,
@@ -203,7 +205,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiLogsGroup({
+    public getLogsBySchemaAndHash({
         schemaName,
         hash,
     }: {
@@ -229,7 +231,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public postApiLogsSearch({
+    public searchLogs({
         page,
         limit,
         from,
@@ -271,7 +273,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiUsers(): CancelablePromise<{
+    public getUsers(): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
@@ -287,7 +289,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public postApiUsers({
+    public createUser({
         requestBody,
     }: {
         requestBody?: UserRequest,
@@ -309,7 +311,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiUsers1({
+    public getUserById({
         id,
     }: {
         id: number,
@@ -332,7 +334,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public deleteApiUsers({
+    public deleteUserById({
         id,
     }: {
         id: number,
@@ -358,7 +360,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public putApiUsers({
+    public updateUserById({
         id,
         requestBody,
     }: {
@@ -385,7 +387,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiSession(): CancelablePromise<{
+    public getSession(): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
@@ -401,7 +403,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public postApiSession({
+    public createSession({
         requestBody,
     }: {
         requestBody?: Credentials,
@@ -423,10 +425,10 @@ export class DefaultService {
      * @returns UserResponse
      * @throws ApiError
      */
-    public postApiSetupRegisterAdmin({
+    public registerAdmin({
         requestBody,
     }: {
-        requestBody?: UserResponse,
+        requestBody?: UserRequest,
     }): CancelablePromise<UserResponse> {
         return this.httpRequest.request({
             method: 'POST',
@@ -439,11 +441,11 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiApiTokens(): CancelablePromise<{
+    public getTokens(): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Array<ApiToken>;
+        data: Array<ApiTokenResponse>;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -455,15 +457,15 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public postApiApiTokens({
+    public createToken({
         requestBody,
     }: {
-        requestBody?: ApiToken,
+        requestBody?: ApiTokenRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: ApiToken;
+        data: ApiTokenResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -477,7 +479,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiApiTokens1({
+    public getTokenById({
         id,
     }: {
         id: number,
@@ -485,7 +487,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: ApiToken;
+        data: ApiTokenResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -500,17 +502,17 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public putApiApiTokens({
+    public updateTokenById({
         id,
         requestBody,
     }: {
         id: number,
-        requestBody?: ApiToken,
+        requestBody?: ApiTokenRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: ApiToken;
+        data: ApiTokenResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -527,7 +529,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public deleteApiApiTokens({
+    public deleteTokenById({
         id,
     }: {
         id: number,
@@ -550,11 +552,11 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiTags(): CancelablePromise<{
+    public getTags(): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Array<Tag>;
+        data: Array<TagResponse>;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -566,15 +568,15 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public postApiTags({
+    public createTag({
         requestBody,
     }: {
-        requestBody?: Tag,
+        requestBody?: TagRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Tag;
+        data: TagResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -588,7 +590,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public getApiTags1({
+    public getTagById({
         id,
     }: {
         id: number,
@@ -596,7 +598,7 @@ export class DefaultService {
         success: boolean;
         code: number;
         error: string;
-        data: Tag;
+        data: TagResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -611,17 +613,17 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public putApiTags({
+    public updateTagById({
         id,
         requestBody,
     }: {
         id: number,
-        requestBody?: Tag,
+        requestBody?: TagRequest,
     }): CancelablePromise<{
         success: boolean;
         code: number;
         error: string;
-        data: Tag;
+        data: TagResponse;
         meta: Meta;
     }> {
         return this.httpRequest.request({
@@ -638,7 +640,7 @@ export class DefaultService {
      * @returns any
      * @throws ApiError
      */
-    public deleteApiTags({
+    public deleteTagById({
         id,
     }: {
         id: number,

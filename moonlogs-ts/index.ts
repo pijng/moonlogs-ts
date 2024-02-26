@@ -10,7 +10,8 @@ export { CancelablePromise, CancelError } from './core/CancelablePromise';
 export { OpenAPI } from './core/OpenAPI';
 export type { OpenAPIConfig } from './core/OpenAPI';
 
-export type { ApiToken } from './models/ApiToken';
+export type { ApiTokenRequest } from './models/ApiTokenRequest';
+export type { ApiTokenResponse } from './models/ApiTokenResponse';
 export type { Credentials } from './models/Credentials';
 export { Level } from './models/Level';
 export type { Meta } from './models/Meta';
@@ -22,7 +23,8 @@ export type { SchemaKind } from './models/SchemaKind';
 export type { SchemaRequest } from './models/SchemaRequest';
 export type { SchemaResponse } from './models/SchemaResponse';
 export type { Session } from './models/Session';
-export type { Tag } from './models/Tag';
+export type { TagRequest } from './models/TagRequest';
+export type { TagResponse } from './models/TagResponse';
 export type { UserRequest } from './models/UserRequest';
 export type { UserResponse } from './models/UserResponse';
 

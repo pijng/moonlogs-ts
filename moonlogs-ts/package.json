@@ -1,7 +1,7 @@
 {
   "name": "moonlogs-ts",
   "version": "1.2.1",
-  "description": "OpenAPI client for moonlogs-ts",
+  "description": "OpenAPI client for moonlogs",
   "author": "Mark Cholak <shalpack@gmail.com>",
   "keywords": [
     "fetch",
@@ -15,6 +15,7 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
+  "type": "module",
   "devDependencies": {
     "typescript": "^5.3.3"
   }

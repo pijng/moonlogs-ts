@@ -9,12 +9,25 @@
     "openapi-typescript-codegen"
   ],
   "license": "Apache-2.0",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
   },
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "typings": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs",
+      "types": "./lib/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "/lib",
+    "/index.d.ts"
+  ],
   "type": "module",
   "devDependencies": {
     "@types/node-fetch": "^2.6.11",

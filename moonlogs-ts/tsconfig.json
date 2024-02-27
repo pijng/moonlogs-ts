@@ -3,7 +3,7 @@
     "strict": true,
     /* Basic Options */
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "commonjs",
     "lib": ["ES2022", "dom"],
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -18,11 +18,11 @@
 
     "removeComments": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "noLib": false,
   },
   "exclude": [
-    "dist",
+    "lib",
     "node_modules"
   ],
   "filesGlob": [

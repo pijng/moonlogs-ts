@@ -22,7 +22,7 @@
     "noLib": false,
   },
   "exclude": [
-    "lib",
+    "dist",
     "node_modules"
   ],
   "filesGlob": [

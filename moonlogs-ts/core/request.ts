@@ -2,6 +2,11 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import FormData from 'form-data';
+import fetch, { Headers } from 'node-fetch';
+import type { RequestInit, Response } from 'node-fetch';
+import type { AbortSignal } from 'node-fetch/externals';
+
 import { ApiError } from './ApiError';
 import type { ApiRequestOptions } from './ApiRequestOptions';
 import type { ApiResult } from './ApiResult';
@@ -168,7 +173,7 @@ export const getHeaders = async (config: OpenAPIConfig, options: ApiRequestOptio
         if (options.mediaType) {
             headers['Content-Type'] = options.mediaType;
         } else if (isBlob(options.body)) {
-            headers['Content-Type'] = options.body.type || 'application/octet-stream';
+            headers['Content-Type'] = 'application/octet-stream';
         } else if (isString(options.body)) {
             headers['Content-Type'] = 'text/plain';
         } else if (!isFormData(options.body)) {
@@ -184,7 +189,7 @@ export const getRequestBody = (options: ApiRequestOptions): any => {
         if (options.mediaType?.includes('/json')) {
             return JSON.stringify(options.body)
         } else if (isString(options.body) || isBlob(options.body) || isFormData(options.body)) {
-            return options.body;
+            return options.body as any;
         } else {
             return JSON.stringify(options.body);
         }
@@ -193,7 +198,6 @@ export const getRequestBody = (options: ApiRequestOptions): any => {
 };
 
 export const sendRequest = async (
-    config: OpenAPIConfig,
     options: ApiRequestOptions,
     url: string,
     body: any,
@@ -205,14 +209,10 @@ export const sendRequest = async (
 
     const request: RequestInit = {
         headers,
-        body: body ?? formData,
         method: options.method,
-        signal: controller.signal,
+        body: body ?? formData,
+        signal: controller.signal as AbortSignal,
     };
-
-    if (config.WITH_CREDENTIALS) {
-        request.credentials = config.CREDENTIALS;
-    }
 
     onCancel(() => controller.abort());
 
@@ -299,7 +299,7 @@ export const request = <T>(config: OpenAPIConfig, options: ApiRequestOptions): C
             const headers = await getHeaders(config, options);
 
             if (!onCancel.isCancelled) {
-                const response = await sendRequest(config, options, url, body, formData, headers, onCancel);
+                const response = await sendRequest(options, url, body, formData, headers, onCancel);
                 const responseBody = await getResponseBody(response);
                 const responseHeader = getResponseHeader(response, options.responseHeader);
 

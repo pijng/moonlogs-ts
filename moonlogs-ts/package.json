@@ -13,22 +13,12 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "main": "./lib/index.js",
-  "module": "./lib/index.mjs",
-  "typings": "./lib/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./lib/index.js",
-      "import": "./lib/index.mjs",
-      "types": "./lib/index.d.ts"
-    },
-    "./package.json": "./package.json"
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "/lib",
-    "/index.d.ts"
+    "/dist"
   ],
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "@types/node-fetch": "^2.6.11",
     "abort-controller": "^3.0.0",

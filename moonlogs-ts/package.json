@@ -17,6 +17,10 @@
   },
   "type": "module",
   "devDependencies": {
+    "@types/node-fetch": "^2.6.11",
+    "abort-controller": "^3.0.0",
+    "form-data": "^4.0.0",
+    "node-fetch": "^2.7.0",
     "typescript": "^5.3.3"
   }
 }

@@ -10,7 +10,7 @@
   ],
   "license": "Apache-2.0",
   "scripts": {
-    "build": "cjstoesm \"src/**/*.*\" dist",
+    "build": "cjstoesm \"src/**/*.*\" dist && tsup src/index.ts --dts --format esm,cjs",
     "prepare": "npm run build"
   },
   "main": "dist/index.cjs",
@@ -29,6 +29,7 @@
     "cjstoesm": "^2.1.2",
     "form-data": "^4.0.0",
     "node-fetch": "^2.7.0",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   }
 }

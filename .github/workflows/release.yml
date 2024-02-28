@@ -31,7 +31,7 @@ jobs:
       - name: Generate Typescript Client
         run: |
           npm install openapi-typescript-codegen -g
-          openapi -i swagger.yaml -o moonlogs-ts --name=MoonlogsClient --client node --useOptions
+          openapi -i swagger.yaml -o moonlogs-ts/src --name=MoonlogsClient --client node --useOptions
           rm swagger.yaml
           cd moonlogs-ts
           npm version ${{ github.event.client_payload.tag_version }}

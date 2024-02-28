@@ -10,18 +10,23 @@
   ],
   "license": "Apache-2.0",
   "scripts": {
-    "build": "tsc",
+    "build": "cjstoesm \"src/**/*.*\" dist",
     "prepare": "npm run build"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "/dist"
+    "dist"
   ],
-  "type": "commonjs",
+  "engines": {
+    "node": ">=10"
+  },
+  "type": "module",
   "devDependencies": {
     "@types/node-fetch": "^2.6.11",
     "abort-controller": "^3.0.0",
+    "cjstoesm": "^2.1.2",
     "form-data": "^4.0.0",
     "node-fetch": "^2.7.0",
     "typescript": "^5.3.3"

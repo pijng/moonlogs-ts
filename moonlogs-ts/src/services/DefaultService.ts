@@ -681,4 +681,38 @@ export class DefaultService {
             mediaType: 'application/json',
         });
     }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public getLogRequestById({
+        id,
+    }: {
+        id: number,
+    }): CancelablePromise<any> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/api/logs/{id}/request',
+            path: {
+                'id': id,
+            },
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public getLogResponseById({
+        id,
+    }: {
+        id: number,
+    }): CancelablePromise<any> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/api/logs/{id}/response',
+            path: {
+                'id': id,
+            },
+        });
+    }
 }

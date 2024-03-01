@@ -9,6 +9,8 @@ export type RecordResponse = {
     schema_name: string;
     schema_id: number;
     query: any;
+    request: any;
+    response: any;
     kind: string;
     created_at: string;
     group_hash: string;

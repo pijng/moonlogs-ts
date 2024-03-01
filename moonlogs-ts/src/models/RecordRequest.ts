@@ -8,6 +8,8 @@ export type RecordRequest = {
     schema_name: string;
     schema_id?: number;
     query: any;
+    request?: any;
+    response?: any;
     kind?: string;
     level?: Level;
 };

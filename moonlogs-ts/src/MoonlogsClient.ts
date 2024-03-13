@@ -13,7 +13,7 @@ export class MoonlogsClient {
     constructor(config?: Partial<OpenAPIConfig>, HttpRequest: HttpRequestConstructor = NodeHttpRequest) {
         this.request = new HttpRequest({
             BASE: config?.BASE ?? '',
-            VERSION: config?.VERSION ?? '1.5.4',
+            VERSION: config?.VERSION ?? '1.5.5',
             WITH_CREDENTIALS: config?.WITH_CREDENTIALS ?? false,
             CREDENTIALS: config?.CREDENTIALS ?? 'include',
             TOKEN: config?.TOKEN,

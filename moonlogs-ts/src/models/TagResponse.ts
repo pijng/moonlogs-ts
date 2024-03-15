@@ -5,5 +5,6 @@
 export type TagResponse = {
     id: number;
     name: string;
+    view_order: number;
 };
 

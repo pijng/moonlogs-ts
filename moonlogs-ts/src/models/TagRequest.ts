@@ -4,5 +4,6 @@
 /* eslint-disable */
 export type TagRequest = {
     name: string;
+    view_order: number;
 };
 

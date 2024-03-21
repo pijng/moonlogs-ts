@@ -12,6 +12,9 @@ export type RecordResponse = {
     request: any;
     response: any;
     kind: string;
+    /**
+     * ISO8601 date-time
+     */
     created_at: string;
     group_hash: string;
     level: Level;

@@ -6,6 +6,10 @@ import type { Level } from './Level';
 export type RecordRequest = {
     text: string;
     schema_name: string;
+    /**
+     * ISO8601 date-time
+     */
+    created_at?: string;
     schema_id?: number;
     query: any;
     request?: any;

@@ -1,6 +1,6 @@
 {
   "name": "moonlogs-ts",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "OpenAPI client for moonlogs",
   "author": "Mark Cholak <shalpack@gmail.com>",
   "keywords": [

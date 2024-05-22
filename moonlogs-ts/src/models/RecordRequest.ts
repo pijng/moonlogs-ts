@@ -16,5 +16,6 @@ export type RecordRequest = {
     response?: any;
     kind?: string;
     level?: Level;
+    is_exposed?: boolean;
 };
 

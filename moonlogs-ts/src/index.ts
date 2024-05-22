@@ -10,8 +10,11 @@ export { CancelablePromise, CancelError } from './core/CancelablePromise';
 export { OpenAPI } from './core/OpenAPI';
 export type { OpenAPIConfig } from './core/OpenAPI';
 
+export type { ActionRequest } from './models/ActionRequest';
+export type { ActionResponse } from './models/ActionResponse';
 export type { ApiTokenRequest } from './models/ApiTokenRequest';
 export type { ApiTokenResponse } from './models/ApiTokenResponse';
+export type { Condition } from './models/Condition';
 export type { Credentials } from './models/Credentials';
 export { Level } from './models/Level';
 export type { Meta } from './models/Meta';

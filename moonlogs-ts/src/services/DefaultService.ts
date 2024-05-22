@@ -2,6 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { ActionRequest } from '../models/ActionRequest';
+import type { ActionResponse } from '../models/ActionResponse';
 import type { ApiTokenRequest } from '../models/ApiTokenRequest';
 import type { ApiTokenResponse } from '../models/ApiTokenResponse';
 import type { Credentials } from '../models/Credentials';
@@ -713,6 +715,147 @@ export class DefaultService {
             path: {
                 'id': id,
             },
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public exposeRecordById({
+        id,
+    }: {
+        id: number,
+    }): CancelablePromise<{
+        success: string;
+        code: number;
+        error: string;
+        data: RecordResponse;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'PUT',
+            url: '/api/logs/{id}/expose',
+            path: {
+                'id': id,
+            },
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public coverRecordById({
+        id,
+    }: {
+        id: number,
+    }): CancelablePromise<{
+        success: string;
+        code: number;
+        error: string;
+        data: RecordResponse;
+        meta: RecordResponse;
+    }> {
+        return this.httpRequest.request({
+            method: 'PUT',
+            url: '/api/logs/{id}/cover',
+            path: {
+                'id': id,
+            },
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public getActions(): CancelablePromise<{
+        success: boolean;
+        code: number;
+        error: string;
+        data: Array<ActionResponse>;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/api/actions',
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public createAction({
+        requestBody,
+    }: {
+        requestBody?: ActionRequest,
+    }): CancelablePromise<{
+        success: boolean;
+        code: number;
+        error: string;
+        data: ActionResponse;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/api/actions',
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public getActionById(): CancelablePromise<{
+        success: boolean;
+        code: number;
+        error: string;
+        data: ActionResponse;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/api/actions/{id}',
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public deleteActionById(): CancelablePromise<{
+        success: boolean;
+        code: number;
+        error: string;
+        /**
+         * Deleted Actions's ID
+         */
+        data: number;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'DELETE',
+            url: '/api/actions/{id}',
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public updateActionById({
+        requestBody,
+    }: {
+        requestBody?: ActionRequest,
+    }): CancelablePromise<{
+        success: boolean;
+        code: number;
+        error: string;
+        data: ActionResponse;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'PUT',
+            url: '/api/actions/{id}',
+            body: requestBody,
+            mediaType: 'application/json',
         });
     }
 }

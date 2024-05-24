@@ -10,7 +10,7 @@ export type ActionResponse = {
     method: string;
     conditions: Array<Condition>;
     schema_name: string;
-    schema_id: number;
+    schema_ids: Array<number>;
     disabled: boolean;
 };
 

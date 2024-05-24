@@ -7,9 +7,9 @@ export type ActionRequest = {
     name: string;
     pattern: string;
     method: string;
-    conditions: Array<Condition>;
+    conditions?: Array<Condition>;
     schema_name: string;
-    schema_id?: number;
+    schema_ids?: Array<number>;
     disabled?: boolean;
 };
 

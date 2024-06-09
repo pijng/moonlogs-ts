@@ -19,5 +19,7 @@ export type RecordResponse = {
     group_hash: string;
     level: Level;
     is_exposed: boolean;
+    old_value?: string;
+    new_value?: string;
 };
 

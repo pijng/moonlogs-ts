@@ -1,4 +1,4 @@
-[![Generate and Publish Typescript Client](https://github.com/pijng/moonlogs-ts/actions/workflows/release.yml/badge.svg)](https://github.com/pijng/moonlogs-ts/actions/workflows/release.yml)
+[![Build Typescript SDK](https://github.com/pijng/moonlogs-ts/actions/workflows/release.yml/badge.svg)](https://github.com/pijng/moonlogs-ts/actions/workflows/release.yml)
 
 
 # moonlogs-ts client

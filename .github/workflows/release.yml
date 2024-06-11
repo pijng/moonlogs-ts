@@ -1,4 +1,4 @@
-name: Generate and Publish Typescript Client
+name: Build Typescript SDK
 
 on:
   repository_dispatch:

@@ -21,5 +21,6 @@ export type RecordResponse = {
     is_exposed: boolean;
     old_value?: string;
     new_value?: string;
+    changes?: any;
 };
 

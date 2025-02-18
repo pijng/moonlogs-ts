@@ -7,6 +7,8 @@ import type { ActionResponse } from '../models/ActionResponse';
 import type { ApiTokenRequest } from '../models/ApiTokenRequest';
 import type { ApiTokenResponse } from '../models/ApiTokenResponse';
 import type { Credentials } from '../models/Credentials';
+import type { IncidentResponse } from '../models/IncidentResponse';
+import type { IncidentSearchRequest } from '../models/IncidentSearchRequest';
 import type { Meta } from '../models/Meta';
 import type { RecordRequest } from '../models/RecordRequest';
 import type { RecordResponse } from '../models/RecordResponse';
@@ -854,6 +856,28 @@ export class DefaultService {
         return this.httpRequest.request({
             method: 'PUT',
             url: '/api/actions/{id}',
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @returns any
+     * @throws ApiError
+     */
+    public searchIncidents({
+        requestBody,
+    }: {
+        requestBody?: IncidentSearchRequest,
+    }): CancelablePromise<{
+        success: boolean;
+        code: number;
+        error: string;
+        data: Array<IncidentResponse>;
+        meta: Meta;
+    }> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/api/incidents/search',
             body: requestBody,
             mediaType: 'application/json',
         });

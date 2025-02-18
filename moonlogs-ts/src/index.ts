@@ -16,6 +16,8 @@ export type { ApiTokenRequest } from './models/ApiTokenRequest';
 export type { ApiTokenResponse } from './models/ApiTokenResponse';
 export type { Condition } from './models/Condition';
 export type { Credentials } from './models/Credentials';
+export type { IncidentResponse } from './models/IncidentResponse';
+export type { IncidentSearchRequest } from './models/IncidentSearchRequest';
 export { Level } from './models/Level';
 export type { Meta } from './models/Meta';
 export type { RecordRequest } from './models/RecordRequest';
